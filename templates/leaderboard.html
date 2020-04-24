@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+Leaderboard
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1 class="header">Leaderboard</h1>
+        <button onclick="window.location.href = 'timedleaderboard'" class="btn-leaderboard">Timed</button>
+        <button onclick="window.location.href = 'arcadeleaderboard'" class="btn-leaderboard">Arcade</button>        
+      </form>
+
+        
+        <div>
+            <button  onclick="window.location.href = 'mainmenu'" type="button" class="btn-return">Back to menu</button>
+        </div>
+     </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

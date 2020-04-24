@@ -1,0 +1,25 @@
+:root {
+  --hue-neutral: 200;
+  --hue-correct: 145;
+}
+
+#progressBar {
+    margin: 10px auto;
+    height: 7vh;
+    background-color: var(--hue-neutral);
+  }
+  
+  #progressBar div {
+    height: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 7vh;
+    font-size: x-large;
+    width: 0;
+    background-color: hsl(var(--hue), 100%, 50%);;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  /* Do not take in account */
+  html{padding-top:30px}a.solink{position:fixed;top:0;width:100%;text-align:center;background:#f3f5f6;color:#cfd6d9;border:1px solid #cfd6d9;line-height:30px;text-decoration:none;transition:all .3s;z-index:999}a.solink::first-letter{text-transform:capitalize}a.solink:hover{color:#428bca}

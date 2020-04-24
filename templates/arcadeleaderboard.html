@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+Arcade Leaderboard
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='leaderboard.css')}}">
+    <script src="{{url_for('static', filename='leaderboard.js')}}"></script>
+
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="header">Arcade Leaderboard</h1>
+    
+    <input type="text" id="inputValue" onkeyup="filterSearch()" placeholder="Search User..." class="searchbox">
+
+
+        </head>
+        
+        <table id="leaderboardTable">
+            <tr>
+              <th>Position</th>
+              <th>User</th>
+              <th>Score</th>
+            </tr>
+            {%for i in range(0, len)%} 
+            <tr> 
+                <td>{{i + 1}}</td> 
+                <td>{{scores[i].username}}</td> 
+                <td>{{scores[i].arcadeScore}}</td> 
+            {%endfor%} 
+          </table>
+
+            <button  onclick="window.location.href = 'leaderboard'" type="button" class="btn-return">Back to menu</button>
+  
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

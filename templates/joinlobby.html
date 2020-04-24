@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Arcade
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='quizjoin.css')}}">
+{% endblock %}
+
+{% block content %}
+<!-- This is the page that players see when they want to join a lobby -->
+<div class="container"><!-- panel-footer -->
+    <h1 class="header"><b>Join Lobby</b></h1>
+        <!-- Player joined goes to playerwait.html page -->
+        <form action="/playerwait">
+            <div class="form-field">
+                <label id = "label">Display Name</label>
+                <input id = "name" type = "text" name="name" autofocus/>
+            </div>
+            <br>
+            <div class="form-field">
+                <label id = "label">Game Pin</label>
+                <input id = "pin" type="number" name="pin"/>
+            </div>
+            <br>
+            <div class="form-field">
+                <button id = "joinButton" onclick="window.location.href = 'lobbyselection'">Join</button>
+            </div>
+    </form>
+            <button id = "joinButton" onclick="window.location.href = 'multiplayermenu'">Back to menu</button>
+    </div> <!-- /container -->
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Timed
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='gameboard.css')}}">
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="rowtimer">
+    <div class="columntimer">
+      <div class="cardtimer">
+        <p id="timer">Time</p>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="columnanswers">
+    <div class="card">
+      <h3 id="answered">00</h3>
+    </div>
+  </div>
+
+  <div class="columnanswers">
+    <div class="cardcorrect">
+      <h3 id="correct">00</h3>
+    </div>
+  </div>
+
+  <div class="columnanswers">
+    <div class="cardwrong">
+      <h3 id="wrong">00</h3>
+    </div>
+  </div>
+</p>
+
+<div class="questionfield">
+  <p class="notification">Note: Answer to the nearest 2 Decimal Places where applicable</p>
+  <p id = "question" class="question"> Question </p>
+</div>
+<input class="searchbox" id = "ans" type="text" placeholder='Type your answer here...'>
+
+
+    <h3><b>Score:</b></h3>
+      <div class="column">
+        <div class="card">
+          <h3 id="score">00</h3>
+        </div>
+      </div>
+    <button type="button" onclick="submitAnswer()" id="submit" class="btn-gameboard">Submit</button> 
+    <button type="button" onclick="submitScoreAndFinish()" id="finish" class="btn-gameboard" hidden>Finish!</button> 
+    <button type="button" onclick="window.location.href = 'playgame'"  id="return" class="btn-gameboard">Back</button> 
+   
+</div>
+
+<script onload="initialiseGame('{{duration}}', '{{questions}}', '{{mode}}', '{{username}}')" type="text/javascript" src="{{ url_for('static', filename='timed.js') }}"></script>
+{% endblock %}

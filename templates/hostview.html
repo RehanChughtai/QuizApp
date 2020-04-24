@@ -1,0 +1,50 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Create Quiz 
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='hostgameview.css')}}">
+
+{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <h4 id = "questionNum">Question <span id = "quesNum">1</span> / x</h4>
+            <h4 id = "playersAnswered">Players Answered: 0 / x</h4>
+            <h3 id = "timerText">Time Left:<span id = "num"> 20</span></h3>
+    
+    
+            <div class = "square" id = "square1"></div>
+            <div class = "square" id = "square2"></div>
+            <div class = "square" id = "square3"></div>
+            <div class = "square" id = "square4"></div>
+    
+            <h2 id = "question">Question</h2>
+            <h3 id = "answer1">Answer</h3>
+            <br>
+            <h3 id = "answer2">Answer</h3>
+            <br>
+            <h3 id = "answer3">Answer</h3>
+            <br>
+            <h3 id = "answer4">Answer</h3>
+    
+            <br>
+            <button class="btn-quiz" onclick = "nextQuestion()" id = "nextQButton">Next Question</button>
+            
+            <div id = "results">
+                <h2 id = "winnerTitle">Results</h4>
+            </div>
+            <button class="btn-quiz" onclick="window.location.href = 'playgame'" id = "backButton">Back to Main Menu</button>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename='jqueryLibrary.js')}}"></script>
+        <script src="{{url_for('static', filename='deparam.js')}}"></script>
+        <script src="{{url_for('static', filename='hostgame.js')}}"></script>
+
+        {% endblock %}

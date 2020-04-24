@@ -1,0 +1,48 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Multiplayer Gameboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='multiplayer.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='countdown.css')}}">
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+      <div id="question-container" class="hide">
+        <!-- Progress Countdown bar goes here -->
+        <div id="progressBar">
+          <div class="bar"></div>
+        </div>
+
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div id="results" class="hide">
+        <h2>Results</h2>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+        <button id="finish-btn" class="next-btn btn hide">Finish</button>
+      </div>
+      <div><h3 class="stats" id="score">0</h3></div>
+      <button id="backButton"onclick="window.location.href = 'playgame'" class="end-btn btn">Back to Main Menu</button>
+    </div> <!-- /container -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename='jqueryLibrary.js')}}"></script>
+<script src="{{url_for('static', filename='deparam.js')}}"></script>
+<script src="{{url_for('static', filename='multiplayer.js')}}"></script>
+{% endblock %}

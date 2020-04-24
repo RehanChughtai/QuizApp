@@ -1,0 +1,94 @@
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 12%;
+  }
+
+  .columnanswers {
+    float: left;
+    width: 22%;
+    padding: 5px 4px;
+  }
+
+  .columntimer {
+    float: right;
+    width: 33.5%;
+    margin-top: 0.75%;
+  }
+  
+  .row {margin: -70px 0px;}
+
+  .rowtimer {margin: -9px 0px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 7px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+  }
+
+  .cardtimer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 18px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+    height: 8.325vh;
+  }
+
+  .cardcorrect {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 7px;
+    text-align: center;
+    background-color: green;
+    color: white;
+  }
+
+  .cardwrong {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 7px;
+    text-align: center;
+    background-color: red;
+    color: white;
+  }
+  
+  .fa {font-size: xx-large; }
+
+ .question{
+      font-size: xx-large;
+      padding-top: 30px;;
+  }
+
+  .questionfield{
+      padding-top: 23%;
+      margin-bottom: 4%;
+  }
+
+  p{
+    font-size: xx-large; 
+    text-align: left;
+    margin: -9px -7px 0px;
+  }
+
+  h3{
+    font-size: xx-large; 
+  }

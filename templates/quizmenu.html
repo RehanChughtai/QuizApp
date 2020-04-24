@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Multiplayer
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Interactive</h1>
+        <button onclick="window.location.href = 'quizjoinlobby'" class="btn-leaderboard" type="submit">Join Lobby</button>
+        <button onclick="window.location.href = 'quizcreatelobby'" class="btn-leaderboard" type="submit">Create Lobby</button>        
+        <button  onclick="window.location.href = 'playgame'" type="button" class="btn-return">Back to menu</button>
+      </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

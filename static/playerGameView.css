@@ -1,0 +1,35 @@
+html, body { height: 90%; padding: 0; margin: 0; }
+.answerbox {
+    width: 18vw;
+    height: 20vh;
+    margin: 2%;
+}
+#answer1{
+    background-color: green;
+}
+#answer2{
+    background-color: yellow;
+}
+#answer3{
+    background-color: blue;
+}
+#answer4{
+    background-color: red;
+}
+
+#buttons{
+    text-align: center;
+}
+#nameText{
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 10px;
+}
+#scoreText{
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 10px;
+}
+#message{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}

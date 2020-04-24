@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+Main Menu
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+
+
+  </head>
+  <body>
+    
+    
+    <div class="container">
+      <div class="btn-grid">
+        <button onclick="window.location.href = 'playgame'" class="btn">Play Game</button>
+        <button onclick="window.location.href = 'leaderboard'" class="btn">Leaderboard</button> 
+        <button onclick="deleteAccount()" class="btn">Delete Account</button>        
+        <button onclick="window.location.href = 'logout'" class="btn">Logout</button>
+      </form>
+      </div>
+    </div> <!-- /container -->
+
+    <script src="{{url_for('static', filename='mainmenu.js')}}"></script>
+  </body>
+</html>

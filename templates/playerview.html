@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Create Quiz 
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='playergameview.css')}}">
+
+{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <div id = "stats">
+                <h4 id = "nameText">Name: </h4>
+                <h4 id = "scoreText">Score: </h4>
+                <h4 id = "rankText"></h4>
+            </div>
+            <h2 id = "message"></h2>
+            <button class="answerbox" onclick = "answerSubmitted(1)" id = "answer1" class = "button"></button>
+            <button class="answerbox" onclick = "answerSubmitted(2)" id = "answer2" class = "button"></button>
+            <br>
+            <button class="answerbox" onclick = "answerSubmitted(3)" id = "answer3" class = "button"></button>
+            <button class="answerbox" onclick = "answerSubmitted(4)" id = "answer4" class = "button"></button>
+            <button onclick="window.location.href = 'playgame'" id = "backButton" class = "btn-quiz">Back to Main Menu</button>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename='jqueryLibrary.js')}}"></script>
+        <script src="{{url_for('static', filename='deparam.js')}}"></script>
+        <script src="{{url_for('static', filename='playergame.js')}}"></script>
+
+        {% endblock %}

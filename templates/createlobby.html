@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Arcade
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        
+        <h2 id = "title">Join this Game using the Game Pin: </h2>
+        <h1 id = "gamePinText"></h1>
+        <textarea style = "width: 700px; height: 500px;" readonly id = 'players'></textarea>
+        <br>
+        <button class="btn-leaderboard" id = 'start' onclick = "startGame()">Start Game</button>
+        <button class="btn-leaderboard" onclick = "back()">Back</button>
+        <br>
+        <br>
+        </div>
+
+        <script src="{{url_for('static', filename='jqueryLibrary.js')}}"></script>
+        <script src="{{url_for('static', filename='deparam.js')}}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename='host.js')}}"></script>
+{% endblock %}

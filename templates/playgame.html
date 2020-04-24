@@ -1,0 +1,65 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Play Game
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<!-- <link rel="stylesheet" href="{{url_for('.static', filename='profile.css')}}">
+<script src="{{url_for('static', filename='profile.js')}}"></script> -->
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<!------ Include the above in your HEAD tag ---------->
+
+            <div class="container">    
+                  <div class="row">
+                      <div class="panel panel-default">
+                      <div class="panel-heading">  <h4 >My Stats</h4></div>
+                       <div class="panel-body">
+                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                       <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
+
+                      </div>
+                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
+                          <div class="container" >
+                            <h2>{{ username }}</h2>
+                            <h3>Timed Score: {{stats.timedScore}}</h3>
+                            <h3>Arcade Score: {{stats.arcadeScore}}</h3>
+                            <h3>Total Score: {{stats.totalScore}}</h3>
+                            <h3>Last Played: {{stats.lastPlayed}}</h3>
+                          </div>
+                      </div>
+                </div>
+            </div>
+            </div>
+
+      <div class="panel-footer row"><!-- panel-footer -->
+        <div class="col-xs-6 text-left">
+            <div class="previous">
+                    <button onclick="window.location.href = 'timed'" class="btn btn-lg btn-primary btn-block" type="submit">Timed
+                            <button onclick="window.location.href = 'multiplayermenu'" class="btn btn-lg btn-primary btn-block" type="submit">Multiplayer
+              </button>
+            </button>
+            </div>
+        </div>
+        <div class="col-xs-6 text-right">   
+            <div class="next">
+                    <button onclick="window.location.href = 'arcade'" class="btn btn-lg btn-primary btn-block" type="submit">Arcade
+                    <button onclick="window.location.href = 'quizmenu'" class="btn btn-lg btn-primary btn-block" type="submit">Interactive Quiz
+              </button>
+            </button>
+            <button  onclick="window.location.href = 'mainmenu'" type="button" class="btn-return">Back</button>
+            </div>
+        </div>
+    </div>
+
+    </div> <!-- /container -->
+{% endblock %}

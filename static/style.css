@@ -1,0 +1,177 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  
+/* Leaderboard Selection */
+
+.btn-leaderboard {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 48%;
+    margin-left: 1%;
+  }
+
+  .btn-leaderboard:hover {
+    border-color: black;
+  }
+
+  .btn-return {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 35%;
+  }
+
+  .btn-return:hover {
+    border-color: black;
+  }
+
+  .header{
+    text-align: center;
+    font-size: -webkit-xxx-large;
+  }
+
+  /* Delete Account */
+
+  .btn-deleteaccount {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 2%;
+    width: 49%;
+  }
+
+  .btn-deleteaccount:hover {
+    border-color: black;
+  }
+
+  .searchbox{
+    font-size: 18pt; 
+    height: 8vh; 
+    width:100%;
+  }
+
+  .searchbox-gameselection{
+    font-size: 18pt; 
+    height: 8vh; 
+    width:90%;
+  }
+
+  .searchbox-lobbyselection{
+    font-size: 18pt; 
+    height: 8vh; 
+    width:87%;
+    margin-bottom: 2%;
+  }
+
+/* Gameboard */
+
+  .btn-gameboard {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 40%;
+    margin-left: 3%;
+  }
+
+  .btn-gameboard:hover {
+    border-color: black;
+  }
+
+  .notification{
+    font-size: x-large;
+  }
+
+  /* Quiz Return Button */
+
+  .btn-quiz {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 52%;
+    margin-left: 23%;
+  }
+
+  .btn-quiz:hover {
+    border-color: black;
+  }

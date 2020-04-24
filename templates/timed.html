@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Timed
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="header"><b>Choose Amount of Time</b></h1>
+    <form action= 'gameboard'>
+        <input type="number" id="duration-field" name="duration" value="60" class="searchbox-gameselection"><b>Seconds</b>
+        <input type="text" id="game-mode" name="mode" value="timed" class="searchbox-gameselection" hidden>
+        <button class="btn-deleteaccount" type="submit" id="submit">Play!</button>
+        <button type="button" onclick="window.location.href = 'playgame'"  id="return" class="btn-deleteaccount">Back</button> 
+    </form>
+</div> 
+            
+{% endblock %}

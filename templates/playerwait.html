@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Create Quiz 
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='lobby.css')}}">
+{% endblock %}
+
+{% block content %}
+        <div class="container">
+            <h1 id = "title1">Waiting on host to start game</h1>
+        <h3 id = "title2">Do you see your name on the screen?</h3>
+        <div class="loader"></div>
+        <br/>
+            <!-- Auto load to playerview.html once host pressed game start button -->
+
+        </div>
+        <script src="{{url_for('static', filename='jqueryLibrary.js')}}"></script>
+        <script src="{{url_for('static', filename='deparam.js')}}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename='lobby.js')}}"></script>
+
+        {% endblock %}
